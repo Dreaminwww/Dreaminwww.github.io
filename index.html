@@ -214,7 +214,12 @@
       display: flex; align-items: center; justify-content: center;
       font-size: 5rem; box-shadow: 0 8px 32px var(--shadow);
     }
-    .about-photo img { width: 100%; height: 100%; object-fit: cover; border-radius: 18px; }
+    .about-photo img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top;
+      border-radius: 18px;
+      transition: transform .35s cubic-bezier(.34,1.56,.64,1);
+    }
+    .about-photo:hover img { transform: scale(1.03); }
     .photo-badge { display: none; }
 
     .about-text h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 1rem; color: var(--text); }
@@ -693,9 +698,8 @@
   <div class="container">
     <div class="about-grid">
       <div class="about-photo-wrap fade-up">
-        <div class="about-photo">
-          <!-- 将此图片替换为你的照片: <img src="photo.jpg" alt="彭靖文"> -->
-          🧑‍💻
+        <div class="about-photo" onclick="openLightbox('photo/Dreamin.jpg')" style="cursor:zoom-in;">
+          <img src="photo/Dreamin.jpg" alt="彭靖文 Dreamin" />
         </div>
       </div>
       <div class="about-text fade-up">
