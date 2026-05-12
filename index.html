@@ -344,6 +344,34 @@
     }
 
     /* ── HIGHLIGHTS ── */
+    /* ── SLASH TAGS ── */
+    #slash-tags { background: var(--bg); }
+    .slash-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
+    .slash-card {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 1.4rem 1.5rem;
+      display: flex; align-items: flex-start; gap: 1rem;
+      transition: border-color .25s, transform .25s;
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+    .slash-card:hover { border-color: rgba(181,145,138,.3); transform: translateY(-2px); }
+    .slash-icon {
+      font-size: 1.8rem; flex-shrink: 0;
+      width: 44px; height: 44px; display: flex; align-items: center; justify-content: center;
+      background: var(--surface2); border-radius: 10px; border: 1px solid var(--border);
+    }
+    .slash-body { flex: 1; min-width: 0; }
+    .slash-title { font-size: .94rem; font-weight: 700; color: var(--text); margin-bottom: .3rem; }
+    .slash-desc { font-size: .8rem; color: var(--muted); line-height: 1.7; }
+    .slash-badge { display: inline-block; margin-top: .5rem; font-size: .7rem; color: var(--gold); font-weight: 600; }
+    .slash-links { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .6rem; }
+    .slash-link {
+      font-size: .75rem; color: var(--primary); text-decoration: none;
+      padding: .18rem .55rem; border: 1px solid var(--primary); border-radius: 99px;
+      transition: background .2s, color .2s;
+    }
+    .slash-link:hover { background: var(--primary); color: #fff; }
+
     #highlights { background: var(--surface); }
     .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.25rem; }
     .hl-card {
@@ -351,12 +379,82 @@
       border-radius: var(--r); padding: 2rem; text-align: center;
       transition: transform .25s, box-shadow .25s, border-color .25s;
       box-shadow: 0 2px 10px var(--shadow);
+      display: flex; flex-direction: column; align-items: center;
     }
     .hl-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(110,80,65,.1); border-color: rgba(181,145,138,.3); }
     .hl-icon { font-size: 2.6rem; margin-bottom: .9rem; display: block; }
     .hl-title { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: .45rem; }
     .hl-desc { font-size: .84rem; color: var(--muted); line-height: 1.8; }
     .hl-badge { display: inline-block; margin-top: .7rem; font-size: .72rem; color: var(--gold); font-weight: 600; }
+    .hl-links { display: flex; flex-wrap: wrap; justify-content: center; gap: .45rem; margin-top: 1rem; }
+    .hl-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .78rem; color: var(--primary); font-weight: 500;
+      text-decoration: none; padding: .28rem .75rem;
+      border: 1px solid rgba(181,145,138,.25); border-radius: 99px;
+      background: rgba(255,255,255,.42);
+      transition: background .2s, border-color .2s, color .2s;
+    }
+    .hl-link:hover { background: rgba(181,145,138,.12); border-color: rgba(181,145,138,.45); color: var(--accent); }
+    .hl-book-thumb {
+      width: 100%; max-width: 220px; margin-top: 1rem;
+      border-radius: 10px; overflow: hidden; border: 1px solid var(--border);
+      background: var(--surface); cursor: zoom-in;
+    }
+    .hl-book-thumb img { width: 100%; height: 140px; object-fit: cover; display: block; }
+    .section-anchor {
+      position: absolute; top: -80px; left: 0;
+      width: 1px; height: 1px; pointer-events: none;
+    }
+
+    /* ── PUBLICATION (inside education) ── */
+    .pub-card {
+      margin-top: 1.25rem;
+      background: var(--surface2); border: 1px solid var(--border);
+      border-radius: var(--r); padding: 1.75rem;
+      display: flex; gap: 1.75rem; align-items: flex-start;
+      transition: border-color .25s, transform .25s;
+      box-shadow: 0 2px 10px var(--shadow);
+    }
+    .pub-card:hover { border-color: rgba(181,145,138,.3); transform: translateY(-2px); }
+    .pub-thumbs {
+      display: flex; flex-direction: column; gap: .6rem;
+      flex-shrink: 0; width: 120px;
+    }
+    .pub-thumb {
+      border-radius: 8px; overflow: hidden;
+      border: 1px solid var(--border);
+    }
+    .pub-thumb img { width: 100%; display: block; }
+    .pub-body { flex: 1; min-width: 0; }
+    .pub-badge {
+      display: inline-flex; align-items: center; gap: .3rem;
+      font-size: .68rem; font-weight: 600; padding: .18rem .65rem;
+      border-radius: 99px; background: rgba(120,140,185,.1);
+      color: #4a5f96; border: 1px solid rgba(120,140,185,.28);
+      margin-bottom: .75rem;
+    }
+    .pub-title {
+      font-size: 1rem; font-weight: 700; color: var(--text);
+      line-height: 1.5; margin-bottom: .3rem;
+    }
+    .pub-title-en {
+      font-size: .82rem; color: var(--muted); line-height: 1.5; margin-bottom: .55rem;
+    }
+    .pub-meta { font-size: .78rem; color: var(--subtle); margin-bottom: 1rem; }
+    .pub-link {
+      display: inline-flex; align-items: center; gap: .35rem;
+      font-size: .82rem; font-weight: 600; color: var(--primary);
+      text-decoration: none; padding: .4rem .9rem;
+      border: 1px solid var(--primary); border-radius: 99px;
+      transition: background .2s, color .2s;
+    }
+    .pub-link:hover { background: var(--primary); color: #fff; }
+    @media (max-width: 560px) {
+      .pub-card { flex-direction: column; }
+      .pub-thumbs { width: 100%; flex-direction: row; }
+      .pub-thumb { flex: 1; }
+    }
 
     /* ── EDUCATION ── */
     #education { padding-top: 0; background: var(--surface); }
@@ -445,14 +543,17 @@
     .work-title { font-size: .97rem; font-weight: 700; color: var(--text); line-height: 1.4; }
     .work-year { font-size: .7rem; color: var(--muted); white-space: nowrap; padding-top: .15rem; }
     .work-tags { display: flex; flex-wrap: wrap; gap: .32rem; }
+    .works-grid { --work-thumb-h: 120px; }
     /* 单图：完整展示，保留原始比例，超高图片居中呈现 */
     .work-imgs.count-1 {
-      display: flex; justify-content: center; align-items: flex-start;
+      display: flex; justify-content: center; align-items: center;
+      height: var(--work-thumb-h);
       background: var(--bg2); border-radius: 8px; overflow: hidden;
       border: 1px solid var(--border);
     }
     .work-imgs.count-1 img {
-      max-width: 100%; max-height: 280px; width: auto; height: auto; display: block;
+      max-width: 100%; max-height: 100%; width: auto; height: auto; display: block;
+      object-fit: contain;
     }
     /* 多图：每张图独立卡片感，有明显分隔 */
     .work-imgs.count-2, .work-imgs.count-3 {
@@ -464,7 +565,7 @@
       border: 1px solid var(--border);
       display: flex; justify-content: center; align-items: center;
     }
-    .work-imgs.count-2 .img-cell { height: 120px; }
+    .work-imgs.count-2 .img-cell { height: var(--work-thumb-h); }
     .work-imgs.count-3 .img-cell { height: 96px; }
     .work-imgs.count-2 .img-cell img,
     .work-imgs.count-3 .img-cell img {
@@ -504,7 +605,7 @@
     .wt-code  { background: rgba(120,140,185,.1);  color: #4a5f96; border-color: rgba(120,140,185,.28); }
     .work-actions { margin-top: auto; display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; }
     .work-mini-note { font-size: .75rem; color: var(--subtle); display: inline-flex; align-items: center; gap: .3rem; }
-    .portfolio-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 1rem; }
+    .portfolio-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1rem; }
     /* 分类标签 */
     .portfolio-cat-tag {
       display: inline-flex; align-items: center; gap: .28rem;
@@ -620,6 +721,98 @@
       .timeline { padding-left: 1.5rem; }
       footer { flex-direction: column; text-align: center; }
     }
+    /* ── MUSIC PLAYER ── */
+    .music-widget {
+      position: fixed; bottom: 2rem; right: 2rem;
+      z-index: 999;
+    }
+    .music-panel {
+      position: absolute; bottom: calc(100% + .6rem); right: 0;
+      width: 330px; border-radius: 16px; overflow: hidden;
+      background: var(--surface);
+      box-shadow: 0 12px 40px rgba(110,80,65,.18);
+      border: 1px solid rgba(181,145,138,.25);
+      transform: translateY(12px) scale(.97);
+      opacity: 0; pointer-events: none;
+      transition: opacity .3s ease, transform .3s ease;
+    }
+    .music-panel.open {
+      opacity: 1; pointer-events: auto;
+      transform: translateY(0) scale(1);
+    }
+    .music-header {
+      padding: .85rem 1rem .7rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .music-album-title {
+      font-size: .82rem; font-weight: 600; color: var(--text);
+    }
+    .music-list {
+      list-style: none; margin: 0; padding: .4rem 0;
+      max-height: 196px; overflow-y: auto;
+    }
+    .music-item {
+      display: flex; align-items: center; gap: .6rem;
+      padding: .45rem 1rem; cursor: pointer;
+      transition: background .15s;
+      font-size: .82rem; color: var(--muted);
+    }
+    .music-item:hover { background: var(--surface2); }
+    .music-item.active { color: var(--primary); background: var(--surface2); }
+    .music-item.active .music-item-num { color: var(--primary); }
+    .music-item-num { font-size: .72rem; color: var(--subtle); width: 18px; flex-shrink: 0; }
+    .music-item-name { flex: 1; }
+    .music-player-wrap { border-top: 1px solid var(--border); }
+    .music-player-wrap iframe { display: block; }
+    .music-controls {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: .55rem 1rem; border-top: 1px solid var(--border);
+      background: var(--surface2);
+    }
+    .music-prev, .music-next {
+      background: none; border: none; cursor: pointer;
+      font-size: 1rem; color: var(--muted); padding: .2rem .4rem;
+      border-radius: 6px; transition: color .2s, background .2s;
+    }
+    .music-prev:hover, .music-next:hover { color: var(--primary); background: var(--surface); }
+    .music-now { font-size: .78rem; color: var(--text); font-weight: 500; flex: 1; text-align: center; }
+    .music-toggle {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: var(--primary); color: #fff;
+      border: none; cursor: pointer; font-size: 1.3rem;
+      box-shadow: 0 4px 16px rgba(181,145,138,.45);
+      display: flex; align-items: center; justify-content: center;
+      transition: transform .2s, box-shadow .2s;
+      flex-shrink: 0;
+    }
+    .music-toggle:hover { transform: scale(1.08); box-shadow: 0 6px 22px rgba(181,145,138,.55); }
+    .music-toggle.playing { animation: pulse-ring 2s ease-in-out infinite; }
+    @keyframes pulse-ring {
+      0%, 100% { box-shadow: 0 4px 16px rgba(181,145,138,.45); }
+      50% { box-shadow: 0 4px 24px rgba(181,145,138,.7), 0 0 0 6px rgba(181,145,138,.15); }
+    }
+    .music-bubble {
+      position: absolute; bottom: calc(100% + 10px); right: 0;
+      background: var(--text); color: var(--bg);
+      font-size: .78rem; font-weight: 500; line-height: 1.5;
+      padding: .55rem .85rem; border-radius: 10px;
+      white-space: nowrap; cursor: pointer;
+      box-shadow: 0 4px 16px rgba(0,0,0,.15);
+      opacity: 0; pointer-events: none;
+      transform: translateY(6px);
+      transition: opacity .35s ease, transform .35s ease;
+    }
+    .music-bubble::after {
+      content: ''; position: absolute; top: 100%; right: 14px;
+      border: 6px solid transparent;
+      border-top-color: var(--text);
+    }
+    .music-bubble.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+    @media (max-width: 400px) {
+      .music-widget { bottom: 1rem; right: 1rem; }
+      .music-panel { width: calc(100vw - 2rem); right: 0; }
+      .music-bubble { white-space: normal; width: 180px; }
+    }
   </style>
 </head>
 <body>
@@ -631,10 +824,10 @@
     <li><a href="#about">关于我</a></li>
     <li><a href="#experience">工作履历</a></li>
     <li><a href="#projects">项目经历</a></li>
-    <li><a href="#highlights">个人亮点</a></li>
     <li><a href="#ai-awards">AI获奖</a></li>
     <li><a href="#ai-portfolio">AI作品集</a></li>
     <li><a href="#education">教育背景</a></li>
+    <li><a href="#slash-tags">斜杠标签</a></li>
     <li><a href="#contact" class="nav-cta">联系我</a></li>
   </ul>
 </nav>
@@ -685,10 +878,6 @@
         <div class="stat-num" data-count="90" data-suffix="%+">0</div>
         <div class="stat-label">用户满意度</div>
       </div>
-      <div class="stat-card fade-up">
-        <div class="stat-num" data-count="24">0</div>
-        <div class="stat-label">岁出版书籍</div>
-      </div>
     </div>
   </div>
 </section>
@@ -737,8 +926,6 @@
             <span class="tag tag-green">C端 APP</span>
             <span class="tag tag-gold">数据驱动迭代</span>
             <span class="tag tag-gold">产品战略规划</span>
-            <span class="tag tag-gold">英语 IELTS 7.0</span>
-            <span class="tag tag-gold">英语 CET-6 602</span>
           </div>
         </div>
       </div>
@@ -751,11 +938,6 @@
   <div class="container">
     <div class="adv-grid">
       <div class="adv-card fade-up">
-        <div class="adv-icon">📚</div>
-        <div class="adv-title">24 岁出版书籍</div>
-        <div class="adv-desc">曾登上京东图书畅销榜、微信读书新书 TOP200 榜单。</div>
-      </div>
-      <div class="adv-card fade-up">
         <div class="adv-icon">🤖</div>
         <div class="adv-title">多款 AI 产品全链路经验</div>
         <div class="adv-desc">主导 B&C 端多款 AI 产品 0-1 落地，覆盖 AI 对话 APP、智能客服 Agent、AIGC 写作平台、RAG 知识库等。</div>
@@ -764,6 +946,11 @@
         <div class="adv-icon">🚀</div>
         <div class="adv-title">快速 0-1 的落地能力</div>
         <div class="adv-desc">在不同行业、不同团队规模下，持续完成从 0 到 1 的产品落地，具备对新领域的快速学习和资源整合能力。</div>
+      </div>
+      <div class="adv-card fade-up">
+        <div class="adv-icon">📚</div>
+        <div class="adv-title">互联网+金融复合背景</div>
+        <div class="adv-desc">横跨证券、风控大数据与产业数字化转型，具备金融与互联网交叉领域的系统性认知。</div>
       </div>
     </div>
   </div>
@@ -781,7 +968,7 @@
       <div class="tl-item fade-up">
         <div class="tl-meta">
           <span class="tl-date">2024.11 — 至今</span>
-          <span class="tl-company">华林证券股份有限公司</span>
+          <span class="tl-company">H证券股份有限公司</span>
           <span class="tl-role">AI 产品经理</span>
           <span class="tl-loc">📍 深圳</span>
         </div>
@@ -789,11 +976,10 @@
           收购了原字节跳动证券业务「海豚」，打造国民级理财 AI 助手 APP
         </div>
         <ul class="tl-list">
-          <li>主导 AI 对话页基础模块设计（交互卡片、对话气泡组件、深度思考模式等），建立 40+ 可复用卡片组件库</li>
+          <li>主导 AI 对话页基础模块设计（交互卡片、对话气泡组件、深度思考模式等），抽象并建立卡片组件规范标准</li>
           <li>统筹内部 RAG 知识库平台自研上线与功能迭代，推动通用接口化，支撑 10+ 个 Agent 调用</li>
           <li>主导智能客服 Agent 从 0-1 完成落地，打破传统券商客服思路，提出创新交互方式</li>
-          <li>通过 System Prompt 优化、切片调优等数据驱动方法持续迭代产品效果</li>
-          <li>统筹 APP 基础能力建设：登录页、我的页，推出游客态登录模式减少用户流失</li>
+          <li>基于数据驱动迭代体系，通过系统提示词工程、场景切片精细化调优，持续打磨 AI 模型交付质量与产品核心体验</li>
         </ul>
         <div class="tl-results">
           <span class="result-chip">↑ FCR 首答解决率 +20%</span>
@@ -886,11 +1072,11 @@
         </div>
         <div>
           <div class="proj-title">海豚 AI APP</div>
-          <div class="proj-org">华林证券</div>
+          <div class="proj-org">H证券</div>
         </div>
         <p class="proj-desc">
           国民级 AI 炒股理财助手。
-          主导 AI 对话页基础模块设计，建立 40+ 可复用卡片组件库；
+          主导 AI 对话页基础模块设计，抽象并建立卡片组件规范标准；
           统筹 RAG 知识库自研，推动通用能力接口化支撑 10+ 个 Agent；
           打造智能客服 Agent，历时半年完成 APP 整体 0-1 上生产。
         </p>
@@ -1012,54 +1198,6 @@
 </section>
 
 <!-- ── HIGHLIGHTS ── -->
-<section id="highlights">
-  <div class="container">
-    <p class="section-label fade-up">Personal Highlights</p>
-    <h2 class="section-title fade-up">不只是产品人</h2>
-    <p class="section-sub fade-up">跨领域的感知力，是我最宝贵的竞争力</p>
-
-    <div class="highlights-grid">
-      <div class="hl-card fade-up">
-        <span class="hl-icon">📚</span>
-        <div class="hl-title">出版作者</div>
-        <div class="hl-desc">
-          24 岁出版人生第一本书籍，上架京东图书畅销榜，
-          登上微信读书新书 TOP 200 榜单。
-          用文字输出思考，用内容创造影响力。
-        </div>
-        <span class="hl-badge">京东畅销榜 · 微信读书新书 TOP 200</span>
-      </div>
-      <div class="hl-card fade-up">
-        <span class="hl-icon">🎵</span>
-        <div class="hl-title">独立音乐人</div>
-        <div class="hl-desc">
-          作词 / 作曲 / 编曲 / 演唱 / 混音全流程独立完成，
-          入驻腾讯音乐、网易云音乐、抖音、酷狗等平台。
-          音乐是我感知世界的另一种语言。
-        </div>
-        <span class="hl-badge">腾讯 · 网易云 · 抖音 · 酷狗 音乐人</span>
-      </div>
-      <div class="hl-card fade-up">
-        <span class="hl-icon">🏃</span>
-        <div class="hl-title">耐力型运动员</div>
-        <div class="hl-desc">
-          平板支撑 10 分钟、长跑 10km，身体力行地践行「耐力」二字。
-          相信身体的坚韧和职业上的耐力是同一种能力。
-        </div>
-        <span class="hl-badge">平板支撑 10min · 长跑 10km</span>
-      </div>
-      <div class="hl-card fade-up">
-        <span class="hl-icon">🌍</span>
-        <div class="hl-title">多语言能力</div>
-        <div class="hl-desc">
-          雅思 7 分，英语六级 602 分，具备流利阅读英文技术文档
-          和与国际团队沟通的能力。另外熟练掌握粤语、客家话。
-        </div>
-        <span class="hl-badge">IELTS 7.0 · CET-6 602</span>
-      </div>
-    </div>
-  </div>
-</section>
 
 
 <!-- ── AI PORTFOLIO ── -->
@@ -1070,6 +1208,19 @@
     <p class="section-sub fade-up">用 AI 探索创作边界，在编程、音频与视频等创作赛道赢得专业肯定</p>
 
     <div class="portfolio-cards fade-up">
+
+      <!-- Mini Camp | OPC创造营 · Enter.pro -->
+      <div class="portfolio-card">
+        <div class="portfolio-card-header">
+          <span class="portfolio-award-badge">🏆 结营证明</span>
+          <span class="portfolio-cat-tag cat-tag-code">💻 编程</span>
+        </div>
+        <div class="portfolio-contest">OPC创造营</div>
+        <div class="portfolio-org">Enter.pro · 2026</div>
+        <div class="cert-thumb-wrap" onclick="openLightbox('AI获奖/EnterPro.jpg')">
+          <img src="AI获奖/EnterPro.jpg" alt="Enter.pro 结营证明" loading="lazy" />
+        </div>
+      </div>
 
       <!-- 一句话编程比赛 · Trickle -->
       <div class="portfolio-card">
@@ -1087,11 +1238,11 @@
       <!-- 角色主题曲挑战赛 · Tunee × 京东 JoyAI -->
       <div class="portfolio-card">
         <div class="portfolio-card-header">
-          <span class="portfolio-award-badge">🏆 优质作品 Top4</span>
+          <span class="portfolio-award-badge">🏆 优质作品 Top 4</span>
           <span class="portfolio-cat-tag cat-tag-video">🎬 视频·音乐</span>
         </div>
         <div class="portfolio-contest">角色主题曲挑战赛</div>
-        <div class="portfolio-org">Tunee × 京东 JoyAI · 零帧起手 · 2025</div>
+        <div class="portfolio-org">Tunee × 京东JoyAI零帧起手 · 2025</div>
         <div class="cert-thumb-wrap" onclick="openLightbox('AI获奖/Tunee x 京东JoyAI.png')">
           <img src="AI获奖/Tunee x 京东JoyAI.png" alt="Tunee 优质作品奖证书" loading="lazy" />
         </div>
@@ -1100,7 +1251,7 @@
       <!-- 一点都不技术挑战赛 · 豆包 -->
       <div class="portfolio-card">
         <div class="portfolio-card-header">
-          <span class="portfolio-award-badge">🏆 TOP300 感恩奖</span>
+          <span class="portfolio-award-badge">🏆 TOP 300</span>
           <span class="portfolio-cat-tag cat-tag-code">💻 编程</span>
         </div>
         <div class="portfolio-contest">"一点都不技术"挑战赛</div>
@@ -1172,6 +1323,28 @@
         <div class="work-actions">
           <a href="https://bz44s9grwljv.trickle.host/" target="_blank" class="portfolio-link">点餐系统 →</a>
           <a href="https://bz44s9grwljv.trickle.host/admin.html" target="_blank" class="portfolio-link">管理后台 →</a>
+        </div>
+      </div>
+
+      <!-- FillAI提示词填空工具 -->
+      <div class="work-card" data-cat="code">
+        <div class="work-card-top">
+          <div class="work-title">FillAI提示词填空工具</div>
+          <div class="work-year">2026年4月</div>
+        </div>
+        <div class="work-tags">
+          <span class="portfolio-cat-tag cat-tag-code">💻 编程</span>
+          <span class="portfolio-cat-tag" style="background:rgba(120,140,185,.07);color:#6b7faa;border:1px solid rgba(120,140,185,.2);">Web</span>
+        </div>
+        <div class="work-imgs count-2">
+          <div class="img-cell"><img src="AI作品/fillAI.png" alt="FillAI提示词填空工具1" loading="lazy" onclick="openLightbox('AI作品/fillAI.png')" /></div>
+          <div class="img-cell"><img src="AI作品/fillAI2.png" alt="FillAI提示词填空工具2" loading="lazy" onclick="openLightbox('AI作品/fillAI2.png')" /></div>
+        </div>
+        <div class="work-tools">
+          <span class="work-tool-tag wt-code">Web</span>
+        </div>
+        <div class="work-actions">
+          <a href="https://c5398b85261048289a4d3939fd69e4a4.prod.enter.pro" target="_blank" class="portfolio-link">查看作品 →</a>
         </div>
       </div>
 
@@ -1285,45 +1458,25 @@
         </div>
       </div>
 
-      <!-- 《追逐阳光》 -->
+      <!-- 汽水音乐 -->
       <div class="work-card" data-cat="music">
         <div class="work-card-top">
-          <div class="work-title">《追逐阳光》音乐</div>
+          <div class="work-title">汽水音乐</div>
           <div class="work-year">2025年</div>
         </div>
         <div class="work-tags">
           <span class="portfolio-cat-tag cat-tag-music">🎵 音乐</span>
           <span class="portfolio-cat-tag" style="background:rgba(196,168,130,.08);color:#9a7a52;border:1px solid rgba(196,168,130,.22);">音频</span>
         </div>
-        <div class="work-imgs count-1">
-          <img src="AI作品/追逐阳光.jpg" alt="追逐阳光" loading="lazy" onclick="openLightbox('AI作品/追逐阳光.jpg')" />
+        <div class="work-imgs count-2">
+          <div class="img-cell"><img src="AI作品/追逐阳光.jpg" alt="追逐阳光" loading="lazy" onclick="openLightbox('AI作品/追逐阳光.jpg')" /></div>
+          <div class="img-cell"><img src="AI作品/夜色盛开.jpg" alt="夜色盛开" loading="lazy" onclick="openLightbox('AI作品/夜色盛开.jpg')" /></div>
         </div>
         <div class="work-tools">
           <span class="work-tool-tag wt-music">汽水音乐</span>
         </div>
         <div class="work-actions">
           <a href="https://qishui.douyin.com/s/ixMsSHrf/" target="_blank" class="portfolio-link">查看作品 →</a>
-        </div>
-      </div>
-
-      <!-- 《夜色盛开》 -->
-      <div class="work-card" data-cat="music">
-        <div class="work-card-top">
-          <div class="work-title">《夜色盛开》音乐</div>
-          <div class="work-year">2025年</div>
-        </div>
-        <div class="work-tags">
-          <span class="portfolio-cat-tag cat-tag-music">🎵 音乐</span>
-          <span class="portfolio-cat-tag" style="background:rgba(196,168,130,.08);color:#9a7a52;border:1px solid rgba(196,168,130,.22);">音频</span>
-        </div>
-        <div class="work-imgs count-1">
-          <img src="AI作品/夜色盛开.jpg" alt="夜色盛开" loading="lazy" onclick="openLightbox('AI作品/夜色盛开.jpg')" />
-        </div>
-        <div class="work-tools">
-          <span class="work-tool-tag wt-music">汽水音乐</span>
-        </div>
-        <div class="work-actions">
-          <a href="https://qishui.douyin.com/s/ixMsV3pf/" target="_blank" class="portfolio-link">查看作品 →</a>
         </div>
       </div>
 
@@ -1358,6 +1511,96 @@
         </div>
       </div>
     </div>
+
+    <div class="pub-card fade-up">
+      <div class="pub-thumbs">
+        <div class="pub-thumb" onclick="openLightbox('photo/arxiv.png')" style="cursor:zoom-in;">
+          <img src="photo/arxiv.png" alt="论文封面" loading="lazy" />
+        </div>
+        <div class="pub-thumb" onclick="openLightbox('photo/arxiv2.png')" style="cursor:zoom-in;">
+          <img src="photo/arxiv2.png" alt="论文内页" loading="lazy" />
+        </div>
+      </div>
+      <div class="pub-body">
+        <span class="pub-badge">📄 学术论文</span>
+        <div class="pub-title">A Comprehensive Survey of Deep Research: Systems, Methodologies, and Applications</div>
+        <div class="pub-title-en">《深度研究综述：体系、方法与应用》</div>
+        <div class="pub-meta">arXiv:2506.12594 · 2025年6月</div>
+        <a href="https://arxiv.org/abs/2506.12594" target="_blank" class="pub-link">查看论文 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ── SLASH TAGS ── -->
+<section id="slash-tags">
+  <div class="container">
+    <p class="section-label fade-up">Slash Tags</p>
+    <h2 class="section-title fade-up">斜杠标签</h2>
+    <div class="section-divider fade-up"></div>
+    <div class="slash-grid fade-up">
+      <div class="slash-card">
+        <div class="slash-icon">📚</div>
+        <div class="slash-body">
+          <div class="slash-title">书籍作者</div>
+          <div class="slash-desc">24 岁出版首部书籍</div>
+          <span class="slash-badge">京东畅销榜 · 微信读书新书 TOP 200</span>
+          <div class="slash-links">
+            <a href="https://weread.qq.com/web/bookDetail/ce1328207221b1b2ce1b989" target="_blank" class="slash-link">微信读书</a>
+          </div>
+        </div>
+      </div>
+      <div class="slash-card">
+        <div class="slash-icon">🎵</div>
+        <div class="slash-body">
+          <div class="slash-title">独立音乐人</div>
+          <div class="slash-desc">作词 / 作曲 / 编曲 / 演唱</div>
+          <span class="slash-badge">腾讯 · 网易云 · 抖音 · 酷狗原创音乐人</span>
+          <div class="slash-links">
+            <a href="https://163cn.tv/5EtGAbG" target="_blank" class="slash-link">网易云音乐</a>
+            <a href="https://c6.y.qq.com/base/fcgi-bin/u?__=dqVzhwMfML8s" target="_blank" class="slash-link">QQ音乐</a>
+          </div>
+        </div>
+      </div>
+      <div class="slash-card">
+        <div class="slash-icon">🧪</div>
+        <div class="slash-body">
+          <div class="slash-title">生活标本制作人</div>
+          <div class="slash-desc">把观察、情绪与思考沉淀成可回看的个人样本库</div>
+          <span class="slash-badge">随笔 · 读书笔记</span>
+          <div class="slash-links">
+            <a href="https://mp.weixin.qq.com/s/IkfmHSA8EPp5N0RaQgne5Q" target="_blank" class="slash-link">公众号</a>
+            <a href="https://www.douban.com/doubanapp/dispatch/review/12573078?dt_dapp=1" target="_blank" class="slash-link">豆瓣</a>
+            <a href="https://www.jianshu.com/u/42c1d59da74d" target="_blank" class="slash-link">简书</a>
+          </div>
+        </div>
+      </div>
+      <div class="slash-card">
+        <div class="slash-icon">🏃</div>
+        <div class="slash-body">
+          <div class="slash-title">耐力型运动员</div>
+          <div class="slash-desc">攀岩 / 跑步 / 游泳 / 陆冲 / 街舞</div>
+          <span class="slash-badge">平板支撑 10min · 长跑 10km</span>
+        </div>
+      </div>
+      <div class="slash-card">
+        <div class="slash-icon">🌍</div>
+        <div class="slash-body">
+          <div class="slash-title">多语言能力</div>
+          <div class="slash-desc">雅思 7 级 / 英语六级 602 分 / 粤语 / 客家话</div>
+          <span class="slash-badge">IELTS 7.0 · CET-6</span>
+        </div>
+      </div>
+      <div class="slash-card">
+        <div class="slash-icon">📈</div>
+        <div class="slash-body">
+          <div class="slash-title">证券从业资格证</div>
+          <div class="slash-desc">中国证券业协会颁发的证券从业资格证书</div>
+          <span class="slash-badge"></span>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -1385,7 +1628,9 @@
           <span>深圳</span>
         </div>
       </div>
-      <a href="mailto:smileccc@163.com" class="btn btn-primary">发邮件给我 ✉️</a>
+      <button type="button" id="copy-wechat-btn" class="btn btn-primary" onclick="copyWechat()">
+        一键复制微信号：pjwdreamin
+      </button>
     </div>
   </div>
 </section>
@@ -1426,6 +1671,40 @@
     document.body.style.overflow = '';
   }
   document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
+
+  // ── COPY WECHAT ──
+  function copyWechat() {
+    const wechatId = 'pjwdreamin';
+    const btn = document.getElementById('copy-wechat-btn');
+    const originalText = btn ? btn.textContent : '';
+    const showStatus = (text) => {
+      if (!btn) return;
+      btn.textContent = text;
+      setTimeout(() => { btn.textContent = originalText; }, 1500);
+    };
+
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(wechatId)
+        .then(() => showStatus('已复制微信号'))
+        .catch(() => showStatus('复制失败，请手动复制'));
+      return;
+    }
+
+    const textArea = document.createElement('textarea');
+    textArea.value = wechatId;
+    textArea.setAttribute('readonly', '');
+    textArea.style.position = 'absolute';
+    textArea.style.left = '-9999px';
+    document.body.appendChild(textArea);
+    textArea.select();
+    try {
+      document.execCommand('copy');
+      showStatus('已复制微信号');
+    } catch (e) {
+      showStatus('复制失败，请手动复制');
+    }
+    document.body.removeChild(textArea);
+  }
 
   // ── NAV SCROLL EFFECT ──
   const nav = document.getElementById('nav');
@@ -1533,6 +1812,102 @@
     });
   }, { threshold: 0.5 });
   document.querySelectorAll('[data-count]').forEach(el => counterObserver.observe(el));
+</script>
+<!-- ── MUSIC WIDGET ── -->
+<div class="music-widget">
+  <div class="music-panel" id="musicPanel">
+    <div class="music-header">
+      <span class="music-album-title">🎵 Dreamin 的音乐诗集</span>
+    </div>
+    <ul class="music-list" id="musicList"></ul>
+    <div class="music-player-wrap">
+      <iframe id="musicFrame" frameborder="no" border="0" marginwidth="0" marginheight="0"
+        width="330" height="86"
+        src=""></iframe>
+    </div>
+    <div class="music-controls">
+      <button class="music-prev" id="prevBtn" title="上一首">⏮</button>
+      <span class="music-now" id="nowPlaying">—</span>
+      <button class="music-next" id="nextBtn" title="下一首">⏭</button>
+    </div>
+  </div>
+  <div class="music-bubble" id="musicBubble">我用钢琴写了几首诗，要不要听听～</div>
+  <button class="music-toggle" id="musicToggle" title="Dreamin 的音乐诗集">🎵</button>
+</div>
+
+<script>
+  const songs = [
+    { title: '翻糖蛋糕', id: '1356672630' },
+    { title: '开门',     id: '1356675875' },
+    { title: '冷却的咖啡', id: '1356675871' },
+    { title: '糖果雨季', id: '1356675869' },
+    { title: '想他碎碎念', id: '1356675868' },
+    { title: '小河里的星星', id: '1356672629' },
+    { title: '碎花裙摆', id: '1356675876' },
+  ];
+
+  let current = 0;
+
+  const frame      = document.getElementById('musicFrame');
+  const list       = document.getElementById('musicList');
+  const nowPlaying = document.getElementById('nowPlaying');
+  const toggle     = document.getElementById('musicToggle');
+  const panel      = document.getElementById('musicPanel');
+  const prevBtn    = document.getElementById('prevBtn');
+  const nextBtn    = document.getElementById('nextBtn');
+  const bubble     = document.getElementById('musicBubble');
+
+  // 构建曲目列表
+  songs.forEach((s, i) => {
+    const li = document.createElement('li');
+    li.className = 'music-item';
+    li.dataset.index = i;
+    li.innerHTML = `<span class="music-item-num">${String(i + 1).padStart(2, '0')}</span><span class="music-item-name">${s.title}</span>`;
+    li.addEventListener('click', () => loadSong(i));
+    list.appendChild(li);
+  });
+
+  function loadSong(index) {
+    current = index;
+    const s = songs[index];
+    frame.src = `https://music.163.com/outchain/player?type=2&id=${s.id}&auto=1&height=66`;
+    nowPlaying.textContent = s.title;
+    // 高亮当前曲目
+    list.querySelectorAll('.music-item').forEach((el, i) => {
+      el.classList.toggle('active', i === index);
+    });
+  }
+
+  prevBtn.addEventListener('click', () => loadSong((current - 1 + songs.length) % songs.length));
+  nextBtn.addEventListener('click', () => loadSong((current + 1) % songs.length));
+
+  function openPlayer() {
+    bubble.classList.remove('show');
+    if (!panel.classList.contains('open')) {
+      panel.classList.add('open');
+      toggle.textContent = '✕';
+      toggle.classList.add('playing');
+      if (!frame.src.includes('id=')) loadSong(0);
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    const open = panel.classList.toggle('open');
+    toggle.textContent = open ? '✕' : '🎵';
+    toggle.classList.toggle('playing', open);
+    bubble.classList.remove('show');
+    if (open && !frame.src.includes('id=')) loadSong(0);
+  });
+
+  bubble.addEventListener('click', openPlayer);
+
+  // 3秒后弹出气泡，4秒后自动消失
+  setTimeout(() => {
+    if (!panel.classList.contains('open')) {
+      bubble.classList.add('show');
+      setTimeout(() => bubble.classList.remove('show'), 4000);
+    }
+  }, 3000);
 </script>
 </body>
 </html>
