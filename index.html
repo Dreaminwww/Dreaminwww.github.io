@@ -476,6 +476,7 @@
     .edu-school { font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: .15rem; }
     .edu-major { font-size: .84rem; color: var(--muted); }
     .edu-year { font-size: .73rem; color: var(--muted); margin-top: .3rem; }
+    .edu-honor { font-size: .74rem; color: var(--gold); font-weight: 600; margin-top: .35rem; }
 
     /* ── CONTACT ── */
     #contact { text-align: center; background: var(--bg); }
@@ -895,15 +896,15 @@
         <p class="section-label">About Me</p>
         <h2>我不做“AI功能”，<br/>我负责让 AI 成为业务能力</h2>
         <p>
-          过往在<em>金融科技</em>、<em>传统行业数字化转型</em>与<em>券商科技</em>中，
-          持续推动 AI 从概念走向实际业务，完成从0到1的落地。
-        </p>
+          具备<em>金融科技</em>与<em>AI 产品落地</em>复合经验，
+          擅长将 LLM、RAG、Agent、模型评测体系产品化，
+          推动 AI 能力在证券、客服、知识管理、内容生成等高价值场景中稳定落地。
         </p>
         <p>
-          我不把 AI 当作技术选型问题，而是系统性问题——
-          从<em>RAG架构设计与评估闭环</em>、<em>Prompt工程的策略化与稳定性控制</em>，
-          到<em>Multi-Agent 协同机制与任务拆解</em>，
-          本质是在约束不确定性，让模型能力在真实业务中可控、可放大、可持续演进。
+          我不把 AI 当作单点技术选型，而是系统性产品工程——
+          从<em>LLM Wiki / RAG 知识工程</em>、<em>Agent Planner / Memory / Tool Use 架构</em>，
+          到<em>模型评测、质量治理与数据回流闭环</em>，
+          本质是在约束不确定性，让模型能力在真实业务中可评估、可迭代、可复用、可规模化。
         </p>
         <p>
           同时，持续进行<em>写作</em>与<em>音乐创作</em>，
@@ -915,15 +916,18 @@
           <div class="tags">
             <span class="tag tag-primary">Vibe Coding</span>
             <span class="tag tag-primary">AI 产品规划</span>
-            <span class="tag tag-primary">RAG 知识库</span>
+            <span class="tag tag-primary">AI Native 交互</span>
+            <span class="tag tag-primary">RAG / LLM Wiki</span>
             <span class="tag tag-primary">Prompt Engineering</span>
-            <span class="tag tag-primary">Multi-Agent</span>
+            <span class="tag tag-primary">Agent 架构</span>
+            <span class="tag tag-pink">LLM Evaluation</span>
+            <span class="tag tag-pink">模型质量治理</span>
             <span class="tag tag-pink">智能客服</span>
             <span class="tag tag-pink">AIGC 写作</span>
-            <span class="tag tag-pink">LLM 评测</span>
             <span class="tag tag-green">0-1 产品落地</span>
             <span class="tag tag-green">B端 SaaS</span>
             <span class="tag tag-green">C端 APP</span>
+            <span class="tag tag-gold">可信 AI / 合规</span>
             <span class="tag tag-gold">数据驱动迭代</span>
             <span class="tag tag-gold">产品战略规划</span>
           </div>
@@ -939,18 +943,18 @@
     <div class="adv-grid">
       <div class="adv-card fade-up">
         <div class="adv-icon">🤖</div>
-        <div class="adv-title">多款 AI 产品全链路经验</div>
-        <div class="adv-desc">主导 B&C 端多款 AI 产品 0-1 落地，覆盖 AI 对话 APP、智能客服 Agent、AIGC 写作平台、RAG 知识库等。</div>
+        <div class="adv-title">AI 产品架构与 0-1 落地能力</div>
+        <div class="adv-desc">主导 C 端 AI 助手、智能客服 Agent、RAG 知识库、AIGC 写作平台、数字员工助理等多类 AI 产品从 0 到 1 落地。</div>
       </div>
       <div class="adv-card fade-up">
         <div class="adv-icon">🚀</div>
-        <div class="adv-title">快速 0-1 的落地能力</div>
-        <div class="adv-desc">在不同行业、不同团队规模下，持续完成从 0 到 1 的产品落地，具备对新领域的快速学习和资源整合能力。</div>
+        <div class="adv-title">LLM 评测与模型质量治理能力</div>
+        <div class="adv-desc">具备模型效果评估、场景切片、评测集构建、Prompt/RAG 调优与线上数据回流经验，持续提升 AI 产品质量。</div>
       </div>
       <div class="adv-card fade-up">
         <div class="adv-icon">📚</div>
-        <div class="adv-title">互联网+金融复合背景</div>
-        <div class="adv-desc">横跨证券、风控大数据与产业数字化转型，具备金融与互联网交叉领域的系统性认知。</div>
+        <div class="adv-title">金融高风险场景 AI 产品经验</div>
+        <div class="adv-desc">横跨证券、风控大数据、模型风险管理与产业数字化转型，理解金融业务中的合规、可信、可解释与风险控制要求。</div>
       </div>
     </div>
   </div>
@@ -976,15 +980,16 @@
           收购了原字节跳动证券业务「海豚」，打造国民级理财 AI 助手 APP
         </div>
         <ul class="tl-list">
-          <li>主导 AI 对话页基础模块设计（交互卡片、对话气泡组件、深度思考模式等），抽象并建立卡片组件规范标准</li>
-          <li>统筹内部 RAG 知识库平台自研上线与功能迭代，推动通用接口化，支撑 10+ 个 Agent 调用</li>
-          <li>主导智能客服 Agent 从 0-1 完成落地，打破传统券商客服思路，提出创新交互方式</li>
-          <li>基于数据驱动迭代体系，通过系统提示词工程、场景切片精细化调优，持续打磨 AI 模型交付质量与产品核心体验</li>
+          <li>参与打造国民级理财 AI 助手 APP，负责 AI 对话核心体验与基础能力建设，覆盖对话组件、深度思考模式、结构化卡片、引用展示与风险提示等 AI Native 交互设计</li>
+          <li>主导内部 RAG / LLM Wiki 知识中台自研与迭代，将业务知识、客服 FAQ、产品规则与投研内容沉淀为可检索、可引用、可评估的知识资产，支撑 10+ Agent 统一调用</li>
+          <li>主导智能客服 Agent 从 0-1 落地，围绕意图识别、任务规划 Planner、知识检索、上下文 Memory、工具调用、人工转接与兜底策略设计完整链路</li>
+          <li>建立面向理财问答与客服场景的模型质量迭代机制，通过场景切片、Prompt 调优、知识召回优化与线上数据回流，持续提升回答准确性、稳定性与用户体验</li>
         </ul>
         <div class="tl-results">
           <span class="result-chip">↑ FCR 首答解决率 +20%</span>
-          <span class="result-chip">✓ 10+ 模块 100% 按时交付</span>
-          <span class="result-chip">⚡ 10+ 个 Agent 通用接口</span>
+          <span class="result-chip">✓ RAG / LLM Wiki 知识中台</span>
+          <span class="result-chip">⚡ 10+ Agent 统一调用</span>
+          <span class="result-chip">✓ AI 对话组件体系</span>
         </div>
       </div>
 
@@ -999,10 +1004,10 @@
           香港身份咨询服务龙头企业，垂类市场占有率 Top 1；为传统行业赋能数字化转型
         </div>
         <ul class="tl-list">
-          <li>主导 AIGC 写作平台、智能客服 Chatbot、AI 数字员工助理三款 AI 产品全线落地</li>
-          <li>完成知识库结构设计、文档切片调优，确保 RAG 问答准确率 80%+</li>
-          <li>开展 Multi-Agent 实验，首轮准确率 77%，调优后提升至 85%</li>
-          <li>通过提示工程迭代，引导大模型生成高质量垂直领域回答</li>
+          <li>主导 AIGC 写作平台、智能客服 Chatbot、AI 数字员工助理三款 AI 产品落地，推动传统咨询服务流程从人工经验驱动转向 AI 辅助交付</li>
+          <li>搭建垂直领域知识库与 RAG 问答体系，完成知识结构设计、文档切片、标签治理与召回调优，推动问答准确率达到 80%+</li>
+          <li>开展 Multi-Agent 实验，围绕任务拆解、角色分工、上下文传递与结果校验设计协同机制，首轮准确率 77%，调优后提升至 85%</li>
+          <li>基于用户访谈和驻场观察拆解文书工作流，设计 Prompt 模板、内容策略与质量标准，使月均文书交付量提升 3 倍，用户满意度 90%+</li>
         </ul>
         <div class="tl-results">
           <span class="result-chip">↑ 月均文书交付量 ×3</span>
@@ -1071,84 +1076,106 @@
           <span class="proj-time">2024.11 — 至今</span>
         </div>
         <div>
-          <div class="proj-title">海豚 AI APP</div>
+          <div class="proj-title">海豚 AI APP：金融 AI 助手</div>
           <div class="proj-org">H证券</div>
         </div>
         <p class="proj-desc">
           国民级 AI 炒股理财助手。
-          主导 AI 对话页基础模块设计，抽象并建立卡片组件规范标准；
-          统筹 RAG 知识库自研，推动通用能力接口化支撑 10+ 个 Agent；
-          打造智能客服 Agent，历时半年完成 APP 整体 0-1 上生产。
+          主导 AI 对话核心体验与基础模块设计，将金融问答、行情解读、风险提示等复杂内容抽象为结构化卡片、引用展示与追问引导；
+          建立组件规范支撑多场景复用，推动 APP 整体 0-1 上生产。
         </p>
         <div class="proj-metrics">
-          <span class="metric">FCR ↑ 20%+</span>
-          <span class="metric">10+ Agent 接口</span>
+          <span class="metric">AI Native 交互</span>
           <span class="metric">40+ 组件库</span>
           <span class="metric">100% 按时交付</span>
-        </div>
-      </div>
-
-      <div class="proj-card fade-up">
-        <div class="proj-header">
-          <div class="proj-icon">🧠</div>
-          <span class="proj-time">2023.12 — 2024.05</span>
-        </div>
-        <div>
-          <div class="proj-title">AI 数字员工助理（RAG）</div>
-          <div class="proj-org">银河集团</div>
-        </div>
-        <p class="proj-desc">
-          企业垂域数字专家，短期目标为内部工作助理，长远目标实现咨询去人化。
-          完成知识结构设计与文档切片调优，RAG 问答准确率 80%+；
-          开展 Multi-Agent 实验，首轮准确率 77%，调优后提升至 85%；
-          打造公司第一个数字员工助理，日活稳定。
-        </p>
-        <div class="proj-metrics">
-          <span class="metric">RAG 准确率 80%+</span>
-          <span class="metric">Multi-Agent 85%</span>
-          <span class="metric">满意度 90%+</span>
-        </div>
-      </div>
-
-      <div class="proj-card fade-up">
-        <div class="proj-header">
-          <div class="proj-icon">✍️</div>
-          <span class="proj-time">2023.04 — 2023.11</span>
-        </div>
-        <div>
-          <div class="proj-title">AIGC 写作平台（Prompt Tuning）</div>
-          <div class="proj-org">银河集团</div>
-        </div>
-        <p class="proj-desc">
-          企业业务量暴涨背景下，借 AI 打造文书撰写提效工具。
-          通过用户访谈和驻场观察拆解工作流，识别耗时瓶颈；
-          搭建写作工具 + 知识库 + 策略系统完整体系；
-          完成 AIGC 策略与 Prompt 工程，为文书质量负责。
-        </p>
-        <div class="proj-metrics">
-          <span class="metric">月均交付量 ×3</span>
-          <span class="metric">上线 6 个月达成</span>
+          <span class="metric">金融理财场景</span>
         </div>
       </div>
 
       <div class="proj-card fade-up">
         <div class="proj-header">
           <div class="proj-icon">💬</div>
-          <span class="proj-time">2023.04 — 2023.11</span>
+          <span class="proj-time">2024.11 — 至今</span>
         </div>
         <div>
-          <div class="proj-title">智能客服 Chatbot（BERT 知识库问答）</div>
+          <div class="proj-title">智能客服 Agent：Planner / Memory / Tool Use</div>
+          <div class="proj-org">H证券</div>
+        </div>
+        <p class="proj-desc">
+          主导智能客服 Agent 从 0-1 落地，围绕用户意图识别、任务规划 Planner、知识检索、上下文 Memory、工具调用、人工转接与兜底策略设计完整链路；
+          在券商客服高约束场景下提升首答解决率与服务稳定性。
+        </p>
+        <div class="proj-metrics">
+          <span class="metric">FCR ↑ 20%+</span>
+          <span class="metric">Agent Planner</span>
+          <span class="metric">Memory</span>
+          <span class="metric">Tool Calling</span>
+          <span class="metric">Human Handoff</span>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up">
+        <div class="proj-header">
+          <div class="proj-icon">🧠</div>
+          <span class="proj-time">2024.11 — 至今</span>
+        </div>
+        <div>
+          <div class="proj-title">LLM Wiki / RAG 知识中台</div>
+          <div class="proj-org">H证券</div>
+        </div>
+        <p class="proj-desc">
+          主导搭建面向多 Agent 调用的 LLM Wiki / RAG 知识中台，将业务规则、FAQ、产品说明、投研内容、客服话术等非结构化知识沉淀为可检索、可引用、可运营、可评估的知识资产；
+          设计知识入库、切片策略、元数据标签、版本更新、召回评估与反馈闭环。
+        </p>
+        <div class="proj-metrics">
+          <span class="metric">10+ Agent 调用</span>
+          <span class="metric">LLM Wiki</span>
+          <span class="metric">Citation 引用溯源</span>
+          <span class="metric">知识召回评估</span>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up">
+        <div class="proj-header">
+          <div class="proj-icon">📊</div>
+          <span class="proj-time">2024.11 — 至今</span>
+        </div>
+        <div>
+          <div class="proj-title">LLM 评测与模型质量治理体系</div>
+          <div class="proj-org">H证券</div>
+        </div>
+        <p class="proj-desc">
+          面向金融理财问答、智能客服、业务办理等高风险场景，设计 LLM 评测与质量治理体系；
+          通过场景切片构建评测集，覆盖事实准确性、知识命中率、引用完整性、合规安全、拒答策略、幻觉率、FCR 与用户满意度等指标；
+          结合人工评审、自动化评测与线上数据回流，反向驱动 Prompt、RAG 检索、Agent 工具调用策略持续优化。
+        </p>
+        <div class="proj-metrics">
+          <span class="metric">LLM Evaluation</span>
+          <span class="metric">Golden Dataset</span>
+          <span class="metric">幻觉率治理</span>
+          <span class="metric">合规评测</span>
+          <span class="metric">数据回流闭环</span>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up">
+        <div class="proj-header">
+          <div class="proj-icon">✍️</div>
+          <span class="proj-time">2023.04 — 2024.05</span>
+        </div>
+        <div>
+          <div class="proj-title">AIGC 写作平台 / AI 数字员工</div>
           <div class="proj-org">银河集团</div>
         </div>
         <p class="proj-desc">
-          随业务飞速发展，客户咨询量激增，打造智能客服体系提升服务效率。
-          全生命周期管理用户端、语料库、管理后台；
-          上线官网、小程序客服入口，替代人工问答；
-          为后续数字员工助理项目奠定技术基础。
+          面向咨询服务业务量增长，搭建写作工具、知识库、Prompt 策略与质量标准体系；
+          通过用户访谈和驻场观察拆解工作流，识别文书撰写瓶颈，并在数字员工助理中验证 RAG 与 Multi-Agent 协同机制，推动咨询交付效率提升。
         </p>
         <div class="proj-metrics">
-          <span class="metric">准确率 80%+</span>
-          <span class="metric">替代人工问答</span>
+          <span class="metric">月均交付量 ×3</span>
+          <span class="metric">RAG 准确率 80%+</span>
+          <span class="metric">Multi-Agent 85%</span>
+          <span class="metric">满意度 90%+</span>
         </div>
       </div>
 
@@ -1164,32 +1191,13 @@
         <p class="proj-desc">
           助力金融客户解决模型风险管理痛点，核心功能覆盖模型全生命周期管理：
           模型定义、算法选择、样本清洗、变量选择、模型开发、验证、部署。
-          将企业专业经验转化为产品核心优势，打造企业第二曲线收入产品。
+          将企业模型风险管理经验转化为产品核心优势，为后续金融高风险场景 AI 产品能力打下基础。
         </p>
         <div class="proj-metrics">
           <span class="metric">拿下 2 家种子客户</span>
           <span class="metric">第二曲线产品</span>
-        </div>
-      </div>
-
-      <div class="proj-card fade-up">
-        <div class="proj-header">
-          <div class="proj-icon">🏛️</div>
-          <span class="proj-time">2021.01 — 2021.12</span>
-        </div>
-        <div>
-          <div class="proj-title">企业内部论坛 BBS「融慧圈」</div>
-          <div class="proj-org">融慧金科</div>
-        </div>
-        <p class="proj-desc">
-          企业内部文化交流平台，承载融慧特色文化。
-          完成供应商调研、商务谈判、产品功能设计、开发上线；
-          负责活动策划、内容运营、跨部门联动、积极分子社群运营；
-          处理舆情风险管理与数据安全。
-        </p>
-        <div class="proj-metrics">
-          <span class="metric">员工活动参与率 ×3</span>
-          <span class="metric">文化平台 0-1</span>
+          <span class="metric">模型风险管理</span>
+          <span class="metric">金融 SaaS</span>
         </div>
       </div>
 
@@ -1499,6 +1507,7 @@
           <div class="edu-school">浙江大学</div>
           <div class="edu-major">管理学院 · 工商管理</div>
           <div class="edu-year">2024 — 2027</div>
+          <div class="edu-honor">跨界创新奖学金 · 优秀研究生</div>
         </div>
       </div>
       <div class="edu-card fade-up">
@@ -1508,6 +1517,7 @@
           <div class="edu-school">暨南大学</div>
           <div class="edu-major">电气信息学院 · 物联网工程</div>
           <div class="edu-year">2014 — 2018</div>
+          <div class="edu-honor">二等奖学金</div>
         </div>
       </div>
     </div>
